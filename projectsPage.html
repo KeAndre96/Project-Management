@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <head>
+        <title> Navbar with logo </title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background: white
+            }
+            nav{
+                width: 100%;
+                height: 100%;
+                background: #ff9c33;
+                overflow-x: hidden;
+            }
+            ul{
+                padding: 0;
+                margin: 0 0 0 500px;
+                list-style: none;
+            }
+            li{
+                float: left;
+            }
+            .logo img{
+                position: absolute;
+                margin-top: 15px;
+                margin-left: 10px;
+            }
+            .userLogo img{
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                margin: 0 0 0 1300px;
+            }
+            nav a{
+                width: 100px;
+                display: block;
+                padding: 30px 15px;
+                text-decoration: none;
+                font-family: Arial;
+                color: white;
+                text-align: center;
+            }
+            nav a:hover{
+                background: grey;
+                transition: 0.5s;
+                text-transform: uppercase;
+            }
+            .button {
+                background-color: #ff9c33;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                margin-top: 100px;
+                position: absolute;
+            }
+            #counter1{
+                background-color: red;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,50%);
+                z-index: 9;
+            }
+            .pieContainer {
+                height: 150px;
+                position: relative;
+            }
+
+            .pieBackground {
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;
+                box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+            }
+
+            .pie {
+                transition: all 1s;
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;
+                clip: rect(0px, 75px, 150px, 0px);
+            }
+
+            .hold {
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;
+                clip: rect(0px, 150px, 150px, 75px);
+            }
+
+            #area1 .pie {
+                background-color: #1b458b;
+                transform:rotate(30deg);
+            }
+
+            #area2 {
+                transform: rotate(30deg);
+            }
+
+            #area2 .pie {
+                background-color: #0a0;
+                transform: rotate(60deg);
+            }
+
+            #area3 {
+                transform: rotate(90deg);
+            }
+
+            #area3 .pie {
+                background-color: #f80;
+                transform: rotate(120deg);
+            }
+
+            #area4 {
+                transform: rotate(210deg);
+            }
+
+            #area4 .pie {
+                background-color: #08f;
+                transform: rotate(10deg);
+            }
+
+            #area5 {
+                transform: rotate(220deg);
+            }
+
+            #area5 .pie {
+                background-color: #a04;
+                transform: rotate(70deg);
+            }
+
+            #area6 {
+                transform: rotate(290deg);
+            }
+
+            #area6 .pie {
+                background-color: #ffd700;
+                transform: rotate(70deg);
+            }
+
+            .innerCircle {
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                background-color: #444;
+                border-radius: 100%;
+                top: 15px;
+                left: 15px;
+                box-shadow: 0px 0px 8px rgba(0,0,0,0.5) inset;
+                color: white;
+            }
+            .innerCircle .content {
+                position: absolute;
+                display: block;
+                width: 120px;
+                top: 30px;
+                left: 0;
+                text-align: center;
+                font-size: 14px;
+            }
+
+            .sidebar {
+                height: 100%;
+                width: 225px;
+                position: fixed; 
+                z-index: 1; 
+                top: 84px;
+                left: 0;
+                background-color: #ffffff; 
+                overflow-x: hidden; 
+                padding-top: 0px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border-color: #1b458b;
+            }
+            
+            .content{
+                margin-left: 20%;
+                padding-top: 50px;
+            }
+            
+            td{
+                background: azure;
+                
+            }
+            
+                      
+        </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/master.css">
+    </head>
+<body> 
+<div class = "logo"><a href="#"><img src ="images/logo.png" width="200" height="60"></a>
+    <div class = "userLogo"><a href="#"><img src ="images/user-icon.png" width="100" height="40"></a>
+       
+    </div>
+    <nav>
+        <ul>
+            <li><a href="projectsPage.html">Projects</a></li>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Chat</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </nav>
+
+    <div class="main">
+        <div class="wrap">
+            <div class="sidebar">
+              <a href="#" class="button" onclick="window.location.href = 'createProject.html';">Create Project + </a>
+            </div>
+         
+        <div class="content">
+            <h1>Current Projects</h1>
+              <div class="d-flex flex-row">
+                  <table style="width:100%">
+                      <tr>
+                          <th>Project Name</th>
+                          <th>Department</th>
+                          <th>Deadline</th>
+                      </tr>
+                      <tr>
+                          <td><a href = "project1_Progress.html">MSD2250</a></td>
+                          <td>ASWK</td>
+                          <td>02/25/2020</td>
+                        
+                      </tr>
+                      <tr>
+                          <td>BBL1100</td>
+                          <td>JOPL</td>
+                          <td>06/30/2020</td>
+                      </tr>
+                      <tr>
+                          <td>FER300</td>
+                          <td>PLO</td>
+                          <td>12/30/2019</td>
+                      </tr>
+                      <tr>
+                          <td>TRU8821</td>
+                          <td>OOP</td>
+                          <td>06/30/2020</td>
+                      </tr>
+                      <tr>
+                          <td>LCD1123</td>
+                          <td>HR</td>
+                          <td>12/16/2019</td>
+                      </tr>
+                  </table>  
+                  
+              </div>
+        </div>
+    </div>
+    </div>
+    
+</body>
+</html>
