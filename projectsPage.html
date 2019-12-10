@@ -10,7 +10,12 @@
             body{
                 margin: 0;
                 padding: 0;
-                background: white
+                background-image: url('images/background2.jpg');
+                height: 100%;
+                
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
             nav{
                 width: 100%;
@@ -191,6 +196,7 @@
             
             .content{
                 margin-left: 20%;
+                margin-right:20%;
                 padding-top: 50px;
             }
             
@@ -199,16 +205,48 @@
                 
             }
             
+            .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 50px;
+            }
+
+            .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            }
+
+            .dropdown-content a:hover {background-color: #f1f1f1;}
+            .dropdown:hover .dropdown-content {display: block;}
+            .dropdown:hover .dropbtn {background-color: #3e8e41;}
                       
         </style>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="/css/master.css">
     </head>
 <body> 
-<div class = "logo"><a href="#"><img src ="images/logo.png" width="200" height="60"></a>
-    <div class = "userLogo"><a href="#"><img src ="images/user-icon.png" width="100" height="40"></a>
-       
-    </div>
+<div class = "logo"><a href="homePage.html"><img src ="images/logo.png" width="200" height="60"></a>
+    <!--div class = "userLogo"><a href="#"><img src ="images/user-icon.png" width="100" height="40"></a-->
+        <div class = "dropdown" style = "float:right">
+            <div class = "userLogo"><a href="#"><img src = "images/user-icon.png" width="100" height="40"></a>
+              <div class="dropdown-content">
+                <a href="#" onclick="window.location.href = 'login.html';">Sign Out</a>
+              </div>
+              </div>
+         </div>
+</div>
     <nav>
         <ul>
             <li><a href="projectsPage.html">Projects</a></li>
@@ -221,9 +259,9 @@
 
     <div class="main">
         <div class="wrap">
-            <div class="sidebar">
+            <!--div class="sidebar"-->
               <a href="#" class="button" onclick="window.location.href = 'createProject.html';">Create Project + </a>
-            </div>
+            <!--/div-->
          
         <div class="content">
             <h1>Current Projects</h1>
@@ -241,22 +279,22 @@
                         
                       </tr>
                       <tr>
-                          <td>BBL1100</td>
+                          <td><a href = "project2_Progress.html">BBL1100</a></td>
                           <td>JOPL</td>
                           <td>06/30/2020</td>
                       </tr>
                       <tr>
-                          <td>FER300</td>
+                          <td><a href = "project3_Progress.html">FER300</a></td>
                           <td>PLO</td>
                           <td>12/30/2019</td>
                       </tr>
                       <tr>
-                          <td>TRU8821</td>
+                          <td><a href = "project4_Progress.html">TRU8821</a></td>
                           <td>OOP</td>
                           <td>06/30/2020</td>
                       </tr>
                       <tr>
-                          <td>LCD1123</td>
+                          <td><a href = "project5_Progress.html">LCD1123</a></td>
                           <td>HR</td>
                           <td>12/16/2019</td>
                       </tr>

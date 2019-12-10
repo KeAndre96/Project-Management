@@ -10,7 +10,12 @@
             body{
                 margin: 0;
                 padding: 0;
-                background: white
+                background-image: url('images/background2.jpg');
+                height: 100%;
+                
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
             nav{
                 width: 100%;
@@ -199,14 +204,46 @@
 
             }
 
+            .dropdown {
+            position: relative;
+            display: inline-block;
+            }
 
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 50px;
+            }
+
+            .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            }
+
+            .dropdown-content a:hover {background-color: #f1f1f1;}
+            .dropdown:hover .dropdown-content {display: block;}
+            .dropdown:hover .dropbtn {background-color: #3e8e41;}
         </style>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="/css/master.css">
     </head>
 <body>
-<div class = "logo"><a href="#"><img src ="images/logo.png" width="200" height="60"></a>
-    <div class = "userLogo"><a href="#"><img src ="images/user-icon.png" width="100" height="40"></a>
+<div class = "logo"><a href="homePage.html"><img src ="images/logo.png" width="200" height="60"></a>
+    <!--div class = "userLogo"><a href="#"><img src ="images/user-icon.png" width="100" height="40"></a-->
+        <div class = "dropdown" style = "float:right">
+            <div class = "userLogo"><a href="#"><img src = "images/user-icon.png" width="100" height="40"></a>
+              <div class="dropdown-content">
+                <a href="#" onclick="window.location.href = 'login.html';">Sign Out</a>
+              </div>
+              </div>
+         </div>
 
     </div>
     <nav>
@@ -221,9 +258,9 @@
 
     <div class="main">
         <div class="wrap">
-            <div class="sidebar">
+            <!--div class="sidebar"-->
                 <a href="#" class="button" onclick="window.location.href = 'createProject.html';">Create Project + </a>
-            </div>
+            <!--/div-->
 
             <div class="content">
                 <h1>Project Metrics</h1>
